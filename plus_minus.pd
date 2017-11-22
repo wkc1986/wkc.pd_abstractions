@@ -1,4 +1,4 @@
-#N canvas 618 116 450 486.031 10;
+#N canvas 618 116 822 486.031 10;
 #X obj 68 52 inlet;
 #X obj 242 51 inlet;
 #X obj 144 118 pack \$1 \$2;
@@ -8,6 +8,15 @@
 #X obj 99 284 outlet;
 #X obj 246 286 outlet;
 #X obj 99 244 expr $f1 - $f2;
+#X obj 313 108 loadbang;
+#X obj 312 167 sel sum product;
+#X msg 425 248 doesn't understand creation argument:;
+#X obj 399 348 print;
+#X obj 397 189 t s b;
+#X obj 314 135 symbol \$3;
+#X obj 399 288 route symbol;
+#X text 340 75 TODO select (- \, +) or (/ \, *) with creation argument
+;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
@@ -17,3 +26,10 @@
 #X connect 4 1 5 0;
 #X connect 5 0 7 0;
 #X connect 8 0 6 0;
+#X connect 9 0 14 0;
+#X connect 10 2 13 0;
+#X connect 11 0 12 0;
+#X connect 13 0 15 0;
+#X connect 13 1 11 0;
+#X connect 14 0 10 0;
+#X connect 15 0 12 0;
