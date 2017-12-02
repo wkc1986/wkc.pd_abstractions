@@ -1,4 +1,4 @@
-#N canvas 0 22 689 486 10;
+#N canvas 545 63 689 486 10;
 #X obj 195 148 loop~;
 #X obj 301 211 wrap~;
 #X obj 301 189 +~ 0.5;
@@ -9,6 +9,7 @@
 #X obj 193 342 outlet~;
 #X obj 254 341 outlet~;
 #X obj 325 342 outlet~;
+#X obj 93 76 inlet;
 #X connect 0 0 2 0;
 #X connect 0 0 7 0;
 #X connect 0 1 9 0;
@@ -16,3 +17,4 @@
 #X connect 2 0 1 0;
 #X connect 5 0 0 0;
 #X connect 6 0 0 1;
+#X connect 10 0 0 0;
