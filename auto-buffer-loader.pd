@@ -1,0 +1,78 @@
+#N canvas 0 22 1440 852 10;
+#X obj 109 312 hcs/folder_list;
+#X msg 270 232 clear;
+#X obj 109 341 t s s;
+#X obj 109 377 hcs/split_path;
+#X obj 109 458 pack s s;
+#X obj 104 104 bng 30 250 50 0 empty empty empty 5 12 0 10 -262144
+-1 -1;
+#X obj 270 263 text define -k buffer-hash;
+#A set sfh_harpsichord_loop_PERC.wav /Users/wkc/Documents/sounds/sfh_harpsichord_loop_PERC.wav
+\; sfh_harpsichord_loop_HARM.wav /Users/wkc/Documents/sounds/sfh_harpsichord_loop_HARM.wav
+\; sfh_harpsichord_loop.wav /Users/wkc/Documents/sounds/sfh_harpsichord_loop.wav
+\; processed_hakd.wav /Users/wkc/Documents/sounds/processed_hakd.wav
+\; piano_shoot_2.wav /Users/wkc/Documents/sounds/piano_shoot_2.wav
+\; piano_shoot_1.wav /Users/wkc/Documents/sounds/piano_shoot_1.wav
+\; jonny-drums.wav /Users/wkc/Documents/sounds/jonny-drums.wav \; infra_excerpt.wav
+/Users/wkc/Documents/sounds/infra_excerpt.wav \; hands-up-who-wants-to-die.wav
+/Users/wkc/Documents/sounds/hands-up-who-wants-to-die.wav \; Persephone-drums.wav
+/Users/wkc/Documents/sounds/Persephone-drums.wav \;;
+#X obj 131 662 text insert buffer-hash;
+#N canvas 0 22 450 300 buffer-storage 0;
+#X obj 0 0 array define Persephone-drums.wav;
+#X obj 0 0 array define hands-up-who-wants-to-die.wav;
+#X obj 0 0 array define infra_excerpt.wav;
+#X obj 0 0 array define jonny-drums.wav;
+#X obj 0 0 array define piano_shoot_1.wav;
+#X obj 0 0 array define piano_shoot_2.wav;
+#X obj 0 0 array define processed_hakd.wav;
+#X obj 0 0 array define sfh_harpsichord_loop.wav;
+#X obj 0 0 array define sfh_harpsichord_loop_HARM.wav;
+#X obj 0 0 array define sfh_harpsichord_loop_PERC.wav;
+#X restore 292 512 pd buffer-storage;
+#X obj 109 190 t s b b;
+#X obj 204 408 t s s;
+#X msg 141 583 read -resize \$2 \$1;
+#X obj 141 605 soundfiler;
+#X obj 109 168 makefilename %s/*.wav;
+#X obj 292 482 s pd-buffer-storage;
+#X msg 292 453 obj 0 0 array define \$1 \, dirty 0;
+#X text 286 157 0 select a directory \, scan for *.wav files;
+#X text 243 310 3.1 for each audio file...;
+#X text 543 450 3.2 create an array named from the file name in subpatch
+;
+#X text 301 590 3.3 read the file into that array using its absolute
+path;
+#X text 314 662 3.4 add the array name (= file name) to the list of
+array names;
+#X text 526 220 1 clear previously created arrays from subpatch;
+#X text 472 265 2 clear list of previous array names;
+#X msg 336 212 \; pd-buffer-storage clear \;;
+#X obj 109 146 tof/folderpanel;
+#X symbolatom 141 119 35 0 0 2 directory - -, f 35;
+#X obj 109 480 t b l l;
+#X obj 109 737 outlet;
+#X text 176 730 comment;
+#X obj 109 692 del 10;
+#X connect 0 0 2 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 1;
+#X connect 3 1 10 0;
+#X connect 4 0 26 0;
+#X connect 5 0 24 0;
+#X connect 9 0 0 0;
+#X connect 9 1 1 0;
+#X connect 9 2 23 0;
+#X connect 10 0 4 0;
+#X connect 10 1 15 0;
+#X connect 11 0 12 0;
+#X connect 13 0 9 0;
+#X connect 15 0 14 0;
+#X connect 24 0 13 0;
+#X connect 24 0 25 0;
+#X connect 26 0 29 0;
+#X connect 26 1 7 0;
+#X connect 26 2 11 0;
+#X connect 29 0 27 0;
+#X coords 0 -1 1 1 300 40 2 100 100;
