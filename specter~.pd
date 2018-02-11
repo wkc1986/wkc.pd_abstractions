@@ -1,8 +1,8 @@
 #N canvas 0 23 1440 851 10;
-#X obj 300 115 *~;
+#X obj 300 75 *~;
 #X obj 575 370 loadbang;
 #X msg 575 401 fill 1 \, apply hanning;
-#X obj 300 177 cyclone/cartopol~;
+#X obj 300 137 cyclone/cartopol~;
 #X msg 170 337 slide \$1 \$1;
 #X obj 582 177 noise~;
 #X obj 582 203 *~ 0;
@@ -10,13 +10,13 @@
 #X obj 445 19 inlet;
 #X obj 300 24 inlet~;
 #X obj 300 552 outlet~;
-#X obj 138 83 tabreceive~ \$0-win;
+#X obj 138 43 tabreceive~ \$0-win;
 #X obj 170 419 cyclone/vectral~ \$1;
 #X obj 575 432 cyclone/buffer~ \$0-win @samps \$1;
 #X obj 573 466 block~ \$1 4;
-#X text 51 43 \$1: block size;
+#X text 26 21 \$1: block size;
 #X obj 58 286 cyclone/count~ 0 \$1 1 1;
-#X obj 300 146 fft~;
+#X obj 300 106 fft~;
 #X obj 300 498 ifft~;
 #X obj 300 368 speccompand~;
 #X msg 669 221 thresh \$1;
