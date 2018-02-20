@@ -1,6 +1,6 @@
-#N struct 1006-struct float x float y float y2 float c float c2 symbol
+#N struct 1219-struct float x float y float y2 float c float c2 symbol
 name;
-#N canvas 0 22 1249 531 10;
+#N canvas 0 23 1249 531 10;
 #X msg 513 102 update;
 #X obj 513 200 list split 1;
 #X symbolatom 238 121 35 0 0 0 - - -, f 35;
@@ -16,20 +16,20 @@ yFrom xTo yTo xSize ySize xMargin yMargin;
 #X obj 112 279 * 20;
 #N canvas 710 43 464 477 \$0-menu 0;
 #N canvas 940 179 450 300 \$0-preset-vue 0;
-#X scalar 1006-struct 0.025 0 0.1 0 999 sfh_harpsichord_loop_PERC.wav
+#X scalar 1219-struct 0.025 0 0.1 0 999 sfh_harpsichord_loop_PERC.wav
 \;;
-#X scalar 1006-struct 0.025 0.05 0.15 0 999 sfh_harpsichord_loop_HARM.wav
+#X scalar 1219-struct 0.025 0.05 0.15 0 999 sfh_harpsichord_loop_HARM.wav
 \;;
-#X scalar 1006-struct 0.025 0.1 0.2 0 999 sfh_harpsichord_loop.wav
+#X scalar 1219-struct 0.025 0.1 0.2 0 999 sfh_harpsichord_loop.wav
 \;;
-#X scalar 1006-struct 0.025 0.15 0.25 0 999 processed_hakd.wav \;;
-#X scalar 1006-struct 0.025 0.2 0.3 0 999 piano_shoot_2.wav \;;
-#X scalar 1006-struct 0.025 0.25 0.35 0 999 piano_shoot_1.wav \;;
-#X scalar 1006-struct 0.025 0.3 0.4 0 999 jonny-drums.wav \;;
-#X scalar 1006-struct 0.025 0.35 0.45 0 999 infra_excerpt.wav \;;
-#X scalar 1006-struct 0.025 0.4 0.5 999 0 hands-up-who-wants-to-die.wav
+#X scalar 1219-struct 0.025 0.15 0.25 0 999 processed_hakd.wav \;;
+#X scalar 1219-struct 0.025 0.2 0.3 0 999 piano_shoot_2.wav \;;
+#X scalar 1219-struct 0.025 0.25 0.35 0 999 piano_shoot_1.wav \;;
+#X scalar 1219-struct 0.025 0.3 0.4 0 999 jonny-drums.wav \;;
+#X scalar 1219-struct 0.025 0.35 0.45 0 999 infra_excerpt.wav \;;
+#X scalar 1219-struct 0.025 0.4 0.5 0 999 hands-up-who-wants-to-die.wav
 \;;
-#X scalar 1006-struct 0.025 0.45 0.55 0 999 Persephone-drums.wav \;
+#X scalar 1219-struct 0.025 0.45 0.55 0 999 Persephone-drums.wav \;
 ;
 #X coords 0 0 1 1 300 200 1 0 0;
 #X restore 17 16 pd \$0-preset-vue;
@@ -71,4 +71,4 @@ yFrom xTo yTo xSize ySize xMargin yMargin;
 #X connect 23 0 22 0;
 #X connect 23 1 0 0;
 #X connect 25 0 1 0;
-#X coords 0 -1 1 1 300 40 2 200 100;
+#X coords 0 -1 1 1 260 40 2 200 100;

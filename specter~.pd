@@ -33,8 +33,8 @@
 #X obj 397 280 tabreceive~ \$0-phase;
 #X obj 445 50 route smooth noise gate thresh delta freeze;
 #X obj 444 133 spigot 1;
-#X obj 300 106 rfft~;
-#N canvas 0 22 503 300 spec-gate 0;
+#X obj 300 100 rfft~;
+#N canvas 0 23 503 300 spec-gate 0;
 #X obj 130 53 inlet~;
 #X obj 133 255 *~;
 #X obj 287 214 *~ 0;
@@ -44,9 +44,9 @@
 #X obj 133 276 outlet~;
 #X obj 267 48 inlet thresh;
 #X obj 374 48 inlet invert;
-#X obj 287 186 cyclone/<=~ 0.5;
-#X obj 202 148 cyclone/>=~ 0;
 #X text 352 167 invert boolean;
+#X obj 202 148 cyclone/greaterthaneq~ 0;
+#X obj 287 186 cyclone/lessthaneq~ 0.5;
 #X connect 0 0 1 0;
 #X connect 0 0 10 0;
 #X connect 1 0 6 0;
@@ -57,9 +57,9 @@
 #X connect 7 0 10 1;
 #X connect 8 0 4 0;
 #X connect 8 0 2 1;
-#X connect 9 0 2 0;
 #X connect 10 0 3 0;
-#X connect 10 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 2 0;
 #X restore 300 311 pd spec-gate;
 #X obj 723 86 route invert;
 #X connect 0 0 34 0;

@@ -75,4 +75,4 @@ array names;
 #X connect 26 1 7 0;
 #X connect 26 2 11 0;
 #X connect 29 0 27 0;
-#X coords 0 -1 1 1 300 40 2 100 100;
+#X coords 0 -1 1 1 260 40 2 100 100;
