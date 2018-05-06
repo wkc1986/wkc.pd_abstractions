@@ -1,0 +1,18 @@
+#N canvas 0 22 629 300 10;
+#X obj 52 150 recsplit 2;
+#X msg 52 92 1 2 3 4 5 6;
+#X msg 254 93 11 14 15;
+#X obj 52 171 print split1;
+#X obj 148 171 print remain1;
+#X obj 254 150 recsplit 3;
+#X obj 254 171 print split2;
+#X obj 350 171 print remain2;
+#X text 219 39 recursively split a list into sublists of n items;
+#X connect 0 0 3 0;
+#X connect 0 1 4 0;
+#X connect 1 0 0 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 2 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
