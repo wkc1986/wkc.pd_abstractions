@@ -8,9 +8,11 @@ Likely oriented toward ambient, granular/spectral processing, sampling, etc.
 - `lgrain~`: buffer granulator component triggered with a list of argument-value pairs
 - `ofWaveform~`: attempt at analog of Max's `waveform~` using Ofelia
 - `recsplit`: recursively split a list
+- `specdelay~`: spectral delay with GUI arrays for controlling amplitude and delay time. Largely taken from [Pd Tutorial](http://www.pd-tutorial.com/english/ch03s08.html)
 - `specter~`: spectral blurrer
 
 # Dependencies
 
 - cyclone
+- else
 - ofelia
