@@ -1,0 +1,12 @@
+#N canvas 556 82 450 300 10;
+#X obj 146 58 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 146 99 5 0 0 0 - - -;
+#X floatatom 215 58 5 0 0 0 - - -;
+#X obj 146 78 icounter 0 8 2;
+#X text 84 159 counter with settable increment \; ARGS \; \$1 - min
+\; \$2 - max \; \$3 - increment \; INLETS \; 1 - bang \; 2 - interval
+;
+#X connect 0 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 1 0;
