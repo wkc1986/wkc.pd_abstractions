@@ -1,0 +1,16 @@
+#N canvas 587 84 450 300 10;
+#X obj 116 134 listaccum;
+#X obj 116 155 print;
+#X floatatom 116 55 5 0 0 0 - - -;
+#X symbolatom 165 55 10 0 0 0 - - -;
+#X obj 200 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 243 55 list haruki 4;
+#X text 42 19 accumulates list element by element (element may be a
+sublist). bang to output + reset;
+#X text 226 106 <- output + reset;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;

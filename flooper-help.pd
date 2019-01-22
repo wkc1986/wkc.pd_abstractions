@@ -1,15 +1,15 @@
 #N canvas 241 219 576 420 10;
 #X obj 272 62 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8000 1;
+-1 -1 0 1;
 #X obj 233 202 flooper;
 #X obj 316 178 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 192 158 stop;
 #X obj 233 231 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8000 1;
+-1 -1 0 1;
 #X floatatom 85 158 5 0 0 0 - - -;
 #X msg 85 178 tempo \$1;
-#X msg 153 158 play;
+#X msg 152 158 play;
 #X text 39 27 Loop a stream of floats \; INLETS \; 1: 1 - start recording
 \; 0 - stop recording \, play \; stop - stop playing \; play - start
 playing again \; tempo $float - change tempo \; 2: incoming float stream
@@ -18,6 +18,11 @@ playing again \; tempo $float - change tempo \; 2: incoming float stream
 #X text 337 190 < 3 turn off \, start play;
 #X text 297 61 < 2 move around;
 #X text 263 334 < 4 see this slider repeat your movements;
+#X obj 316 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 316 248 loop \$1;
+#X text 373 249 <5 turn off for one-shot playback;
+#X msg 152 130 bang;
 #X connect 0 0 1 1;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
@@ -25,3 +30,6 @@ playing again \; tempo $float - change tempo \; 2: incoming float stream
 #X connect 5 0 6 0;
 #X connect 6 0 1 0;
 #X connect 7 0 1 0;
+#X connect 13 0 14 0;
+#X connect 14 0 1 0;
+#X connect 16 0 1 0;
